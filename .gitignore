@@ -1,0 +1,6 @@
+*.MP4
+*.mp4
+
+entorno-prueba/
+
+__pycache__/
