@@ -23,6 +23,12 @@ class FFmpegTestBench:
             text=True
         )
 
+        
+        # Mostrar progreso
+        for line in process.stderr: # type: ignore
+            if "frame=" in line or "time=" in line:
+                print(line.strip()) 
+
         process.wait()
 
         fin = time.time()

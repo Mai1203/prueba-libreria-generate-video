@@ -6,15 +6,15 @@ tester = FFmpegTestBench()
 tester.cortar_video(
     input_path="../PL1PT1_PL3PT2_50M.MP4",
     output_path="corte.mp4",
-    start=5,
-    end=35
+    start=10,
+    end=25
 )
 
 tester.cortar_video(
     input_path="../PL3PT2_PL1PT1.MP4",
     output_path="corte2.mp4",
-    start=5,
-    end=35
+    start=10,
+    end=25
 )
 
 # 2. PRUEBA DE UNION
