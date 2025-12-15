@@ -99,14 +99,18 @@ class MoviePyTestBench:
         video = VideoFileClip(input_path)
 
         txt = TextClip(
-            texto,
-            fontsize=60,
+            text=texto,          # 👈 CLAVE
+            font_size=60,
             color="white",
             method="caption",
             size=video.size
-        ).set_position((50, 50)).set_duration(video.duration)
+        )
+
+        txt = txt.with_position((50, 50))
+        txt = txt.with_duration(video.duration)
 
         final = CompositeVideoClip([video, txt])
+        assert final is not None
 
         final.write_videofile(
             output_path,
